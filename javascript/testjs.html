@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        function convert_Celsius_to_Fahrenhelt(c){ 
+        let f = c * (9/5) + 32;
+        return f;
+        }
+
+        function convert_Fahrenhelt_to_Celsius(f){ 
+            let celsius = ((f - 32) * 5)/9;
+        return celsius;
+}    
+
+function oddEven(x) {
+           let r = x%2;
+           if(r==0){
+           document.write(x + " is Even Number" );
+           }else{
+            document.write(x + " is Odd Number" );
+           }
+           }
+  
+           function HourToSecond(h){
+              onehour = 3600;
+              return h*onehour;
+           }
+
+           
+    </script>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <script>
+        let name = 'Thayakorn กับ B1 คนเขียนโค้ดกับฟังเพลง rap และB2 คนแอบเล่นเกมในคาบเรียน'
+      
+        //EX 2
+       let n = 4;
+       oddEven(n);
+
+       //EX 4 
+       let h = 2;
+       let second = HourToSecond(h);
+       document.write("<br>Convert" + h + "hr (s) = " + second + "secords<br>");
+
+
+        /*c = confirm('Are you sure?')
+        if(c){
+           document.write(" Hello " + name);    
+        }else{
+            document.write(" Goodbye " + name);
+        }*/
+
+        //Array
+        let dept;
+        let scores =[10,20,34,56,11];
+        let sum = 0;
+        for(var i=0; i<5; i++){
+            document.write(scores[i] + "<br>");
+            sum+=scores[i];
+        }
+        document.write("Sum = " + sum + "<br>");
+        document.write("Aug = " + sum / scores.length);
+
+        var j=0;
+        while(j<5){
+            document.write(scores[j] + "<br>");
+            sum += scores[i];
+            j++;
+        }
+
+
+        //EX 1
+        let c = 40;
+        let f =convert_Celsius_to_Fahrenhelt(c);
+        document.write("Fahrenhelt ( ํF ) = " + f + "<br>");
+
+        let celsius = convert_Fahrenhelt_to_Celsius(f);
+        document.write("Celsius ( ํC ) = " + celsius);
+
+
+    </script>
+</body>
+</html>

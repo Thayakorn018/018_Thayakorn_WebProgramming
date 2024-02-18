@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+    <style>
+        .error {
+            color: red;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .text{
+            text-align: center;
+        
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="center">
+        <form action="">
+            <h1 class="text">Hello</h1>
+            <button id="clickme" >Click Me</button>
+            <br>
+            <p>Username:</p>
+            <input type="text" id="username" />
+            <p id="errorUsername" class="error"></p>
+            <br>
+            <p>Password:</p>
+            <input type="password" id="password" />
+            <p id="errorPassword" class="error"></p>
+            <br>
+            <input type="submit" value="OK" />
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector("form").onsubmit = function () {
+                let username = document.querySelector("#username").value;
+                let password = document.querySelector("#password").value;
+
+                // Validate username (minimum 8 characters)
+                let checkUsername = username.length >= 8;
+                document.querySelector("#errorUsername").textContent = checkUsername ? "" : "Username must be at least 8 characters";
+
+                // Validate password (minimum 8 characters)
+                let checkPassword = password.length >= 8;
+                document.querySelector("#errorPassword").textContent = checkPassword ? "" : "Password must be at least 8 characters";
+
+                return checkUsername && checkPassword;
+            };
+
+            document.querySelector("#clickme").onclick = function () {
+                document.querySelector("h1").innerHTML = "Good Bye";
+            };
+        });
+    </script>
+</body>
+</html>
+

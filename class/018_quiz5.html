@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz 5 : Box Model</title>
+    <style>
+        body{
+            width: 100%;
+        }
+
+      .main {
+        display: flex;
+        box-sizing: border-box;
+        border: 1px solid red;
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+      }
+
+      .feature {
+        box-sizing: border-box;
+        width: 60%;
+        border: 3px solid red;
+        background-color: violet;
+        padding: 10px;
+        margin: 5px;
+      }
+
+      .col1,
+      .col2 {
+        box-sizing: border-box;
+        width: 15%;
+        margin-right: 5px; 
+        border: 3px solid green;
+        background-color: greenyellow;
+        flex: 1;
+      }
+
+
+      .clear {
+        clear: both;
+      }
+
+      .mainFeature{
+        width: 100%;
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>6540011018 ทยากร บุญอดิศัย</h1>
+    <h2>Quiz 5 : Box Model</h2>
+
+    <div class="main">
+        <div class="mainFeature"> <p class="feature">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat,
+        odit, sit doloremque culpa animi sunt itaque eos placeat recusandae
+        delectus in laboriosam minus commodi modi quae officia dolor dolores
+        vitae.
+      </p>
+
+      <p class="col1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+        veritatis nobis dolorum! Laudantium dolores nihil quis cum libero. Nihil
+        dolorem sapiente unde, officia qui perspiciatis tempore maxime. Iste,
+        voluptatibus error!
+      </p>
+
+      <p class="col2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+        praesentium consequuntur quisquam laudantium aperiam! Voluptatibus
+        praesentium nobis iusto repellendus inventore saepe, sit, sequi odio
+        labore corporis nisi nemo reiciendis suscipit.
+      </p>
+    <div class="clear"></div>
+    </div>
+    </div>
+  </body>
+</html>
